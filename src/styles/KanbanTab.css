@@ -1,0 +1,45 @@
+/* src/styles/KanbanBoard.css */
+.kanban-board {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+    min-height: 100dvh;
+}
+
+.controls {
+    background: var(--bg-primary);
+    padding: 1.5rem 3rem;
+    position: relative;
+    flex-grow: 0;
+
+    @media (max-width: 768px) {
+        padding: 1rem 2rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.columns {
+    background: var(--bg-secondary);
+    display: flex;
+    gap: 2.5rem;
+    overflow-x: auto;
+    padding: 1.5rem 3rem;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+
+    @media (max-width: 768px) {
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+}
